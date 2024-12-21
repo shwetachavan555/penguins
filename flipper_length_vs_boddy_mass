@@ -1,0 +1,13 @@
+install.packages("tidyverse")
+library(tidyverse)
+
+install.packages("dplyr")
+package(dplyr)
+install.packages("ggplot2")        
+library(ggplot2)
+install.packages("palmerpenguins")
+library(palmerpenguins)
+ggplot(data=penguins) +
+  geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species,shape=species,size=species))
+
+
