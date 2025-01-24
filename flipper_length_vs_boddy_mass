@@ -1,13 +1,10 @@
-install.packages("tidyverse")
-library(tidyverse)
-
-install.packages("dplyr")
-package(dplyr)
-install.packages("ggplot2")        
-library(ggplot2)
 install.packages("palmerpenguins")
-library(palmerpenguins)
-ggplot(data=penguins) +
-  geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species,shape=species,size=species))
+library("palmerpenguins")
+install.packages("ggplot2")
+library(ggplot2)
+ggplot(data=penguins)+
+  geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  labs(title="palmerpenguins:body mass vs flipper length",subtitle="sample of three penguins")+
+  annotate("text",x=217,y=3500,label= "The Gentors are the largest",color="purple",fontface="bold")
 
 
